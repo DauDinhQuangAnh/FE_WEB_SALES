@@ -98,8 +98,8 @@ const AdminProduct = () => {
     },
   )
 
-  const getAllProducts = async () => {
-    const res = await ProductService.getAllProduct()
+  const getAllProducts1 = async () => {
+    const res = await ProductService.getAllProduct1()
     return res
   }
 
@@ -158,7 +158,7 @@ const AdminProduct = () => {
   const { data: dataDeletedMany, isLoading: isLoadingDeletedMany, isSuccess: isSuccessDelectedMany, isError: isErrorDeletedMany } = mutationDeletedMany
 
 
-  const queryProduct = useQuery({ queryKey: ['products'], queryFn: getAllProducts })
+  const queryProduct = useQuery({ queryKey: ['products'], queryFn: getAllProducts1 })
   const typeProduct = useQuery({ queryKey: ['type-product'], queryFn: fetchAllTypeProduct })
   const { isLoading: isLoadingProducts, data: products } = queryProduct
   const renderAction = () => {
